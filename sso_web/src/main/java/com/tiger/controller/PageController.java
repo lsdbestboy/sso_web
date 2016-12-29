@@ -16,19 +16,22 @@ public class PageController {
 	private UserService userService;
 	
 	@RequestMapping("resetPasswordStepOfOne")
-	public String resetPasswordStepOfOne(){
+	public String resetPasswordStepOfOne(String redirect, Model model){
+		model.addAttribute("redirect", redirect);
 		return "reset_password/reset_password_step_of_one";
 	}
 	
 	@RequestMapping("resetPasswordStepOfTwo")
-	public String resetPasswordStepOfTwo(String user, Model model) {
+	public String resetPasswordStepOfTwo(String user, Model model, String redirect) {
 		SystemUser systemUser = userService.checkUserIsExist(user);
 		model.addAttribute("phone", systemUser.getPersonalPhone());
+		model.addAttribute("redirect", redirect);
 		return "reset_password/reset_password_step_of_two";
 	}
 	
 	@RequestMapping("resetPasswordSuccessed")
-	public String resetPasswordSuccessed() {
+	public String resetPasswordSuccessed(String redirect, Model model) {
+		model.addAttribute("redirect", redirect);
 		return "reset_password/reset_password_successed";
 	}
 	
