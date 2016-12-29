@@ -31,7 +31,7 @@
                 <p>您在车轮滚滚平台的密码修改成功，
 您可以进行以下操作：</p>
 
-                <p class="link"><a href="http://sso.clgg.com/user/page/login">1、重新登录</a></p>
+                <p class="link"><a href="/user/page/login?redirect=${redirect}">1、重新登录</a></p>
 
                 <p class="link"><a href="http://www.clgg.com">2、进入车轮滚滚首页</a></p>
             </div>

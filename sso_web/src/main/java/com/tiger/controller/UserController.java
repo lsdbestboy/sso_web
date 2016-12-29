@@ -167,7 +167,7 @@ public class UserController {
 	
 	@RequestMapping(value="resetPassword", method = RequestMethod.POST)
 	@ResponseBody
-	public ClggResult resetPassword(String userName, String password){
+	public ClggResult resetPassword(String userName, String password, Model model){
 		return userService.resetPassword(userName, password);
 	}
 	@RequestMapping("checkUser/{user}")

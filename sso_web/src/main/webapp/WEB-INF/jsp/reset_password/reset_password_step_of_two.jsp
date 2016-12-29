@@ -64,7 +64,7 @@
         			$.post("/user/resetPassword", $("#resetPasswordForm").serialize(), function(data){
         				if(data.status){
         					alert('密码修改成功');
-        					 location.href = "/page/resetPasswordSuccessed";
+        					 location.href = "/page/resetPasswordSuccessed?redirect="+$("#redirect").val();
         				} else {
         					alert("密码修改失败");
         				}
@@ -115,6 +115,7 @@
                     <div class="inp-wrap">
                         <input type="password" name="password" id="password"/>
                     </div>
+                    <input type="hidden" name="redirect" value="${redirect}" id="redirect"/>
                 </div>
                 <div class="inp-ele pb_30">
                     <div class="tit">确认密码：</div>

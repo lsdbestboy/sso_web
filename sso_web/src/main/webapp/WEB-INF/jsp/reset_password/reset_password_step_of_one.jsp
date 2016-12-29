@@ -21,7 +21,7 @@
             	url : "/user/checkUser/"+encodeURI(encodeURI($("#user").val()))+"?r=" + Math.random(),
             	success : function(data) { // 校验用户名
     				if (data.status) { // 存在
-    					window.location.href="resetPasswordStepOfTwo?user="+$("#user").val();
+    					window.location.href="resetPasswordStepOfTwo?user="+$("#user").val()+"&redirect="+$("#redirect").val();
     				} else { // 不存在
             			alert("用户名不存在");
     				}
@@ -64,6 +64,7 @@
                 <div class="reg-tip"><span class="tipIcon"></span>请输入您的平台用户名、或已绑定的手机号码</div>
             </div>
             <input type="submit" class="btn registerBtn" value="下一步" onclick="resetPasswordStepOfTwo()"/>
+            <input type="hidden" name="redirect" id="redirect" value="${redirect}">
         </div>
     </div>
 </div>

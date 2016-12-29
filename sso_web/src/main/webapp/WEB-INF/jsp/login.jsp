@@ -76,7 +76,7 @@
 	                <input type="password" placeholder="密码" name="password" id="nloginpwd"/>
 	            </div>
 	            <div class="autoLogin pt_5 pb_5">
-	                <a class="forgetPassword" href="${pageContext.request.contextPath}/page/resetPasswordStepOfOne">忘记密码？</a>
+	                <a class="forgetPassword" href="${pageContext.request.contextPath}/page/resetPasswordStepOfOne?redirect=${redirect}">忘记密码？</a>
 	            </div>
 	            <button class="btn mt_25" id="loginsubmit">登录</button>
 	             <script type="text/javascript">
